@@ -28,7 +28,7 @@ if not st.session_state['logged_in']:
     with st.form("login_form"):
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
-        submit = st.form_submit_with_name("Login")
+        submit = st.form_submit_button("Login")  # هنا تم التصحيح ✅
         
         if submit:
             if username == "admin" and password == "1234":
@@ -95,4 +95,4 @@ else:
         st.error("انتباه! نسبة الالتزام ضعيفة جداً. راجع نفسك قبل دخول السوق، السيكولوجية هي كل شيء.")
 
     if st.button("💾 حفظ تقرير اليوم"):
-        st.success("تم حفظ البيانات في الخزنة السرية بنجاح!")
+        st.success("تم حفظ البيانات بنجاح!")
